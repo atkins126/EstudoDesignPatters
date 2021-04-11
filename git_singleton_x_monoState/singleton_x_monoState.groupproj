@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D55F0764-E79A-4748-9F69-AAFAAAA865EB}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="singleton\singleton.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="monoState\monoState.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="singleton">
+        <MSBuild Projects="singleton\singleton.dproj"/>
+    </Target>
+    <Target Name="singleton:Clean">
+        <MSBuild Projects="singleton\singleton.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="singleton:Make">
+        <MSBuild Projects="singleton\singleton.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="monoState">
+        <MSBuild Projects="monoState\monoState.dproj"/>
+    </Target>
+    <Target Name="monoState:Clean">
+        <MSBuild Projects="monoState\monoState.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="monoState:Make">
+        <MSBuild Projects="monoState\monoState.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="singleton;monoState"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="singleton:Clean;monoState:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="singleton:Make;monoState:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
