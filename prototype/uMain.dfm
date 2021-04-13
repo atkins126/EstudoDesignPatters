@@ -1,0 +1,30 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  BorderWidth = 10
+  Caption = 'Prototype'
+  ClientHeight = 192
+  ClientWidth = 437
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object mmResult: TMemo
+    Left = 0
+    Top = 0
+    Width = 437
+    Height = 192
+    Align = alClient
+    Ctl3D = False
+    ParentCtl3D = False
+    TabOrder = 0
+  end
+end
