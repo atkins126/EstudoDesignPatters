@@ -1,2 +1,2 @@
-## Repositório pessoal de estudos
-## Estudo sobre utilizações de padrões de desenvolvimento, utilizando-se da ferramenta Delphi
+## Repositório pessoal de testes e estudos
+## Implementação de Design Patters (GOF), utilizando-se da ferramenta Delphi Tokyo
