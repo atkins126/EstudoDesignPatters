@@ -41,6 +41,7 @@ var
 
 begin
   appDir := IncludeTrailingPathDelimiter(ExtractFilePath(Application.ExeName)) + 'exported_cards\';
+  ForceDirectories(appDir);
   FPNGFile.Canvas.Font.Size := 64;
   FPNGFile.Canvas.TextOut(5, 10, StringReplace(FMsg[0], '%name%', FReaderName, []));
   FPNGFile.Canvas.TextOut(5, 120, FMsg[1]);
